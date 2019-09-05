@@ -1,0 +1,11 @@
+<html>
+<head><title>Jenkins jobs</title></head>
+<body>
+<ul>
+    {% for name, url, jenkins_url in jobs %}
+        <li><a href="{{ url }}">{{ name }}</a> ({{ jenkins_url }})</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
