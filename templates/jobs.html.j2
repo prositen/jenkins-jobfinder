@@ -1,6 +1,11 @@
 <html>
 <head><title>Jenkins jobs</title></head>
 <body>
+
+<form method="GET" action="/jobs">
+    <input type="text" name="name" value="{{ name }}"/>
+    <input type="submit" value="search" />
+</form>
 <ul>
     {% for name, url, jenkins_url in jobs %}
         <li><a href="{{ url }}">{{ name }}</a> ({{ jenkins_url }})</li>
